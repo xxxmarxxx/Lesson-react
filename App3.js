@@ -1,0 +1,31 @@
+class Message extends React.Component {
+
+        constructor(props){
+            super(props)
+            this.state = {
+                messageIsActive: false
+            }
+            this.handlerMessageButton = this.handlerMessageButton.bind(this)
+        }
+
+        handlerMessageButton(){
+                this.setState({
+                    messageIsActive:  !this.state.messageIsActive
+                })
+
+        }
+
+  render() {
+    console.log(this.state.messageIsActive);
+    const text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex itaque doloremque dolores ea impedit porro, quas placeat rem maiores modi iure nam quod, maxime enim nostrum quae quisquam odio quaerat?'
+
+    return (
+        <>
+        <button onClick={this.handlerMessageButton}>Pokaz</button>
+    <p>{text}</p>
+        </>
+    )
+  }
+}
+
+ReactDOM.render(<Message />, document.getElementById("root"));
