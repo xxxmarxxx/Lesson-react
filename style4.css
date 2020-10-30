@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(252, 252, 229);
+  background-color:#C2FA0A;
     margin: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -10,9 +10,9 @@ body {
   button{
     padding: 10px 20px;
     margin: 10px;
-    border: solid 2px rgba(70, 38, 31, 0.851);
-    border-radius: 10px;
+    border: solid 2px #AD2210;
+    border-radius: 30px;
     font-size: 24px;
-    color: rgb(62, 10, 10);
-    background-color: rgba(180, 164, 222, 0.851);
+    color: #fceded;
+    background-color: #FA3C23;
   }
