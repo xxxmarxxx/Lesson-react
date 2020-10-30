@@ -9,15 +9,16 @@ class Message extends React.Component {
         }
 
         handlerMessageButton(){
+        
                 this.setState({
-                    messageIsActive:  !this.state.messageIsActive
+                    messageIsActive : !this.state.messageIsActive
                 })
 
         }
 
   render() {
     console.log(this.state.messageIsActive);
-    const text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex itaque doloremque dolores ea impedit porro, quas placeat rem maiores modi iure nam quod, maxime enim nostrum quae quisquam odio quaerat?'
+    const text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex itaque doloremque dolores ea impedit porro, quas placeat rem maiores modi iure nam quod, maxime enim nostrum quae quisquam odio quaerat?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex itaque doloremque dolores ea impedit porro, quas placeat rem maiores modi iure nam quod, maxime enim nostrum quae quisquam odio quaerat?'
 
     return (
         <>
