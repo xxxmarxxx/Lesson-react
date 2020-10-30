@@ -14,7 +14,7 @@ class Counter extends React.Component {
     } else if (type === "reset") {
       this.setState((prevState) => ({
         count: prevState.count + 1,
-        result: 0,
+        result: this.props.result,
       }));
     } else if (type === "addition") {
       this.setState((prevState) => ({
