@@ -6,7 +6,7 @@ class Counter extends React.Component {
 
   handlerMathClick = (type, number = 1 ) => {
     // debugger
-    if (type === "substraction") {
+    if (type === "subtraction") {
       this.setState((prevState) => ({
         count: prevState.count + 1,
         result: prevState.result - number,
@@ -30,13 +30,13 @@ class Counter extends React.Component {
         <MathButton
           name="-10"
           number="10"
-          type="substraction"
+          type="subtraction"
           click={this.handlerMathClick}
         />
         <MathButton
           name="-1"
           number="1"
-          type="substraction"
+          type="subtraction"
           click={this.handlerMathClick}
         />
         <MathButton
