@@ -21,11 +21,14 @@ class Message extends React.Component {
 
     return (
         <>
-        <button onClick={this.handlerMessageButton}>Pokaz</button>
-    <p>{text}</p>
+        <button onClick={this.handlerMessageButton}>{this.state.messageIsActive ? 'Ukryj' : 'Pokaz'}</button>
+    {/* {this.state.messageIsActive  ? <p>{text}</p> : null} */}
+    {this.state.messageIsActive && <p>{text}</p>}
+
         </>
     )
   }
 }
 
 ReactDOM.render(<Message />, document.getElementById("root"));
+//<p>{this.state.messageIsActive && text}</p>
