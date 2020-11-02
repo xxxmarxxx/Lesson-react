@@ -1,0 +1,74 @@
+* {
+    background-color: rgb(229, 238, 238);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    margin: 2%;
+    
+    color: rgb(224, 240, 191);
+    text-align: center;
+    
+    font-weight: 400;
+    background-color: darkcyan;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(31, 94, 59);
+}
+
+h3 {
+    margin: 2%;
+    color: rgb(77, 66, 58);
+    /* background-color: crimson;
+    padding: 2%;
+    width: 30%; */
+}
+section{
+    padding: 0px;
+    margin-top: 20px;
+    background-color: mediumseagreen;
+}
+
+p {
+    margin: 2%;
+    
+}
+
+a {
+    text-decoration: none;
+    padding: 2%;
+    background-color: rgba(11, 184, 17, 0.482);
+   
+}
+
+a:link {
+    color: darkblue;
+}
+
+a:hover {
+    color: rgb(225, 225, 225);
+}
+.stopka {
+background-color: darkgray;
+text-align: center;
+}
+
+ul {
+    padding-left: 10%;
+}
+.bb{
+    background-color: rgb(95, 155, 100);
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-right: auto;
+    border: solid, 0px;
+    font-size: 20pt;
+    padding: 2rem;
+   
+}
