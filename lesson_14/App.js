@@ -1,17 +1,20 @@
 
-// przycisk -po klicnieciu dodana jest litera do tekstu
+// Nowy komponent wysfietlanie cyfr
+// losowanie liczb
+// Wyswietlenie nazwy przycisku z objektuprops, ze zmiennej bezposrednio lub z objektu state
 
 class App extends React.Component {
     state = { 
         text: "",
-        btn: "uruchom"
+        btn: 'urochom liczby'
+        
      }
 
 handleClick(){
     // this.state.text += "a";
     // console.log(this.state.text);
     // const letter = " mariusz "
-    const number = Math.floor(Math.random() *49)
+    const number = Math.floor(Math.random() * 49)
     this.setState({
         text: this.state.text + " " + number
     })
@@ -22,10 +25,10 @@ handleClick(){
         return ( 
             <>
             <h2>Liczba Losowa i jej wyswietlenie</h2>
+            {/* <button className="bb" onClick={this.handleClick.bind(this)}>{btnName}</button> */}
             <button className="bb" onClick={this.handleClick.bind(this)}>{this.state.btn}</button>
             <PanelResult text={this.state.text}/>
-            {/* <PanelResult text={this.state.text}>fajnie</PanelResult> */}
-            {/* <h1>{this.state.text}</h1> */}
+            
             </>
          );
     }
@@ -41,4 +44,4 @@ const PanelResult = (props) => {
 }
 
  
-ReactDOM.render(<App btnTitle="dodaj cyfre"/>, document.getElementById("root"))
+ReactDOM.render(<App btnTitle="Dodaj liczbe"/>, document.getElementById("root"))

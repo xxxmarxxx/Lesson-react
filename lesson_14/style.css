@@ -1,28 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #28d4b4;
-    margin: 10px;
-    padding: 10px;
+    background-color: #ea4022;
+    margin: 100px;
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.79);
+    color: #dbb9b4;
 }
 
 h1 {
     font-size: 30px;
-    padding: 10px;
+    padding: 100px;
+    color: #f1e344;
 }
 
 label {
-    padding: 10px 20px;
-    margin: 10px;
     font-size: 24px;
-    color: #4738eb;
+    color: #a57455;
 }
 
-input[type="checkbox"] {
-    zoom: 1.5;
-}
-.negative{
+/* input[type="checkbox"] {
+    zoom: 2.5;
+} */
+
+
+/* .negative{
 color: rgb(225, 18, 18);
+} */
+
+.bb{
+    background-color: #fdae4c;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid, 10px #fdae4c;
+    font-size: 30px;
+    padding: 10px;
+   
 }
