@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(229, 238, 238);
+    background-color: #E3E9DC;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,43 +8,43 @@
 
 h1 {
     margin: 2%;
-    
-    color: rgb(224, 240, 191);
+    color:  #e3e9dc;
     text-align: center;
-    
     font-weight: 400;
-    background-color: darkcyan;
+    background-color: #3e5563;
 }
-h2{
+
+h2 {
     text-align: center;
     margin: 20px;
     font-family: 'Courier New', Courier, monospace;
-    color: rgb(31, 94, 59);
+    color: #3e5563;
 }
 
 h3 {
     margin: 2%;
-    color: rgb(77, 66, 58);
+    color: #3e5563;
     /* background-color: crimson;
     padding: 2%;
     width: 30%; */
 }
-section{
+
+section {
     padding: 0px;
     margin-top: 20px;
-    background-color: mediumseagreen;
+    background-color: #e3e9dc;
 }
 
 p {
     margin: 2%;
-    
+
 }
 
 a {
     text-decoration: none;
     padding: 2%;
-    background-color: rgba(11, 184, 17, 0.482);
-   
+    background-color:  #FCE285;
+
 }
 
 a:link {
@@ -52,23 +52,14 @@ a:link {
 }
 
 a:hover {
-    color: rgb(225, 225, 225);
+    color: #a32208;
 }
+
 .stopka {
-background-color: darkgray;
-text-align: center;
+    background-color: #fce285;
+    text-align: center;
 }
 
 ul {
     padding-left: 10%;
-}
-.bb{
-    background-color: rgb(95, 155, 100);
-    border-radius: 20px;
-    margin-left: 300px;
-    margin-right: auto;
-    border: solid, 0px;
-    font-size: 20pt;
-    padding: 2rem;
-   
 }

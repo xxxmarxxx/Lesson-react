@@ -9,9 +9,9 @@ class Header extends React.Component {
       return (
         <>
         <h2>Shopping List</h2>
-          <h1>
+          <h3>
             <a href="#">Lesson 11 </a>
-          </h1>
+          </h3>
         </>
       );
     }
@@ -53,7 +53,7 @@ class Header extends React.Component {
       render() {
         return (
           <section className="stopka">
-            <h3>I ma Footer</h3>
+            <h3>I'm Footer</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
           </section>
         );
