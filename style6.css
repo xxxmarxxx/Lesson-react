@@ -23,3 +23,6 @@ label {
 input[type="checkbox"] {
     zoom: 1.5;
 }
+.negative{
+color: rgb(225, 18, 18);
+}

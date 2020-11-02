@@ -1,5 +1,5 @@
 const PositveMessage = () => <p>Mozesz ogladac film. Zapraszamy</p>;
-const NegativeMessage = () => <p>Nie mozesz ogladac filmu jesli masz 16 lat!</p>;
+const NegativeMessage = () => <p className="negative">Nie mozesz ogladac filmu jesli masz 16 lat!</p>;
 class CheckBoxAgeConfirmation extends React.Component {
   state = {
     isConfirmed: false,
