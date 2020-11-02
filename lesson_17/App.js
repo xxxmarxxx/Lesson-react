@@ -20,7 +20,7 @@ class Message extends React.Component {
 
     return (
       <>
-        <h1>Pokaz i kryj - Lesson 12-13</h1>
+        <h1>Pokaz badz ukryj - Lesson 17</h1>
         <button onClick={this.handlerMessageButton}>
           {this.state.messageIsActive ? "Ukryj" : "Pokaz"}
         </button>
