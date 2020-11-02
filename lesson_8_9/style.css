@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    background-color: #EEE6D0;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #2B90DD;
+}
+.red{
+    color: #51C7E4 ;
+    margin: 20px;
+}
+
+.big{
+    font-size: 60px;
+    color:#E4FA71 ;
+}
+p{
+    margin: 20px;
+    padding: 20px;
+    background-color: #2B90DD;
+    color: #ffffffee;
+}
+.title{
+    background-color: #E4FA71;
+    padding: 10px;
+}
