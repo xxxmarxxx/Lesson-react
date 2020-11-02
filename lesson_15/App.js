@@ -22,8 +22,9 @@ class App extends React.Component {
     console.log("Zawartosc value w tracie render:" + this.state.value);
     return (
       <>
-      <h2>Input and Reset</h2>
-        <input
+      <div className="wrapper">
+        <h2>Input and Reset - Lesson 15</h2>
+        <input className="inputChange"
           value={this.state.value}
           placeholder="wpisz..."
           onChange={this.handleChange.bind(this)}
@@ -31,6 +32,7 @@ class App extends React.Component {
         />
         <button onClick={this.handleClick}>Reset</button>
         <h1 className="title">{this.state.value.toLocaleUpperCase()}</h1>
+        </div>
       </>
     );
   }
