@@ -2,27 +2,26 @@
 // Destrukturyzacja
 // funkcja poza komponentem
 
-const displayMessage = (isConfirmed, isFormSubmitted) => {
-    if (isFormSubmitted) {
-      if (isConfirmed) {
-        return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
-      } else {
-        return <ValidationMessage txt="Nie mozesz ogladac filmu jesli masz 16 lat!"/>;
-      }
-    } else {return null}
-  };
-
 const ValidationMessage = (props) => {
-    const {txt} = props
-    return (
-        <p>{txt}</p>
-    )
-}
-// const PositveMessage = () => <p className="positive">Mozesz ogladac film. Zapraszamy</p>;
-// const NegativeMessage = () => (
-//   <p className="negative">Nie mozesz ogladac filmu jesli masz 16 lat!</p>
-// );
+  const { txt } = props;
+  return <p>{txt}</p>;
+};
 
+const OrderForm = (props) => {
+  const {submit, change, isConfirmed} = props;
+  return (
+    <form onSubmit={submit}>
+      <input
+        type="checkbox"
+        id="age"
+        onChange={change}
+        checked={isConfirmed}
+      />
+      <label htmlFor="age">Mam co najmniej 16 lat</label>
+      <button type="submit">Kup bilet</button>
+    </form>
+  );
+};
 class Ticketshop extends React.Component {
   state = {
     isConfirmed: false,
@@ -32,47 +31,45 @@ class Ticketshop extends React.Component {
   handleCheckBoxChange = () => {
     this.setState({
       isConfirmed: !this.state.isConfirmed,
-      isFormSubmitted: false
+      isFormSubmitted: false,
     });
   };
 
   handleFormSubmit = (e) => {
-    e.preventDefault()
-    if(!this.state.isFormSubmitted) {
-    this.setState ({
-      isFormSubmitted: true
-    })
-  }
-  }
+    e.preventDefault();
+    if (!this.state.isFormSubmitted) {
+      this.setState({
+        isFormSubmitted: true,
+      });
+    }
+  };
 
-//   displayMessage = () => {
-//     if (this.state.isFormSubmitted) {
-//       if (this.state.isConfirmed) {
-//         return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
-//       } else {
-//         return <ValidationMessage txt="Nie mozesz ogladac filmu jesli masz 16 lat!"/>;
-//       }
-//     } else {return null}
-//   };
-
+  displayMessage = () => {
+    if (this.state.isFormSubmitted) {
+      if (this.state.isConfirmed) {
+        return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
+      } else {
+        return (
+          <ValidationMessage txt="Nie mozesz ogladac filmu jesli nie masz 16 lat!" />
+        );
+      }
+    } else {
+      return null;
+    }
+  };
 
   render() {
-    const { isConfirmed, isFormSubmitted } = this.state
-    console.log(isConfirmed);
-    
+    const { isConfirmed, isFormSubmitted } = this.state;
+
     return (
       <>
         <h1>Kup bilet na horror roku!</h1>
-        <form onSubmit={this.handleFormSubmit}>
-          <input
-            type="checkbox"
-            id="age"
-            onChange={this.handleCheckBoxChange}
-            checked={isConfirmed}/>
-          <label htmlFor="age">Mam co najmniej 16 lat</label>
-          <button type="submit">Kup bilet</button>
-        </form>
-        {displayMessage(isConfirmed, isFormSubmitted)}
+        <OrderForm
+          change={this.handleCheckBoxChange}
+          submit={this.handleFormSubmit}
+          checked={isConfirmed}
+        />
+        {this.displayMessage()}
       </>
     );
   }

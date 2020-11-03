@@ -1,11 +1,11 @@
 body {
-    background-color: #E0E0E0;
+    background-color: #618685;
     margin: 10px;
     padding: 10px;
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
-    color: #795548;
+    color: #fefbd8;
 }
 
 h1 {
@@ -17,24 +17,18 @@ label {
     padding: 10px 20px;
     margin: 10px;
     font-size: 24px;
-    color: #795548;
+    color: #fefbd8;
 }
 
 input[type="checkbox"] {
     zoom: 1.5;
 }
 p{
-    color: #795548;
-}
-.positive{
-    color: lightgreen;
-}
-.negative{
-color: #e093d4;
+    color: #d5f4e6;
 }
 button{
-    background-color: #FFCC80;
-    color: #A1887F;
+    background-color: #d5f4e6;
+    color:  #795548;
     width: 120px;
     height: 30px;
     border: solid 0px;
