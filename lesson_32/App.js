@@ -2,13 +2,22 @@
 // Destrukturyzacja
 // funkcja poza komponentem
 
+const displayMessage = (isConfirmed, isFormSubmitted) => {
+    if (isFormSubmitted) {
+      if (isConfirmed) {
+        return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
+      } else {
+        return <ValidationMessage txt="Nie mozesz ogladac filmu jesli masz 16 lat!"/>;
+      }
+    } else {return null}
+  };
+
 const ValidationMessage = (props) => {
     const {txt} = props
     return (
         <p>{txt}</p>
     )
 }
-
 // const PositveMessage = () => <p className="positive">Mozesz ogladac film. Zapraszamy</p>;
 // const NegativeMessage = () => (
 //   <p className="negative">Nie mozesz ogladac filmu jesli masz 16 lat!</p>
@@ -36,20 +45,21 @@ class Ticketshop extends React.Component {
   }
   }
 
-  displayMessage = () => {
-    if (this.state.isFormSubmitted) {
-      if (this.state.isConfirmed) {
-        return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
-      } else {
-        return <ValidationMessage txt="Nie mozesz ogladac filmu jesli masz 16 lat!"/>;
-      }
-    } else {return null}
-  };
+//   displayMessage = () => {
+//     if (this.state.isFormSubmitted) {
+//       if (this.state.isConfirmed) {
+//         return <ValidationMessage txt="Mozesz ogladac film. Zapraszamy" />;
+//       } else {
+//         return <ValidationMessage txt="Nie mozesz ogladac filmu jesli masz 16 lat!"/>;
+//       }
+//     } else {return null}
+//   };
 
 
   render() {
-    const { isConfirmed } = this.state
+    const { isConfirmed, isFormSubmitted } = this.state
     console.log(isConfirmed);
+    
     return (
       <>
         <h1>Kup bilet na horror roku!</h1>
@@ -58,12 +68,11 @@ class Ticketshop extends React.Component {
             type="checkbox"
             id="age"
             onChange={this.handleCheckBoxChange}
-            checked={isConfirmed}
-          />
+            checked={isConfirmed}/>
           <label htmlFor="age">Mam co najmniej 16 lat</label>
           <button type="submit">Kup bilet</button>
         </form>
-        {this.displayMessage()}
+        {displayMessage(isConfirmed, isFormSubmitted)}
       </>
     );
   }
