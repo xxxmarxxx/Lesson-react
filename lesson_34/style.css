@@ -16,7 +16,7 @@ body {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    color: #f18973;
+    /* color: #f18973; */
 }
 
 p{
@@ -36,5 +36,5 @@ button{
 
 }
 button:disabled{
-    opacity: 0.3;
+    opacity: 0.5;
 }
