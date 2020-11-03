@@ -1,11 +1,11 @@
 body {
-    background-color: #28d4b4;
+    background-color: FFFFF3;
     margin: 10px;
     padding: 10px;
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.79);
+    color: #566270;
 }
 
 h1 {
@@ -17,12 +17,20 @@ label {
     padding: 10px 20px;
     margin: 10px;
     font-size: 24px;
-    color: #4738eb;
+    color: #A593E0;
 }
 
 input[type="checkbox"] {
     zoom: 1.5;
 }
 .negative{
-color: rgb(225, 18, 18);
+color: #e093d4;
+}
+button{
+    background-color: #A593E0;
+    color: lightcyan;
+    width: 120px;
+    height: 30px;
+    border: solid 0px;
+    border-radius: 5px;
 }
