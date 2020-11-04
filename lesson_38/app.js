@@ -15,13 +15,18 @@ const data = {
       age: 19,
       name: "Stasia",
     },
+    {
+        id: 4,
+      age: 17,
+      name: "Karol",
+    }
   ],
 };
 
-const Item = (props) => (
+const Item = ({user}) => (
   <div>
-    <h1>Uzytkownik {props.user.name}</h1>
-    <h2>Ma {props.user.age}</h2>
+    <h1>Uzytkownik {user.name}</h1>
+    <h2>Ma {user.age}</h2>
   </div>
 );
 
