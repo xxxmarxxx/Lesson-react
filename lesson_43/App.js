@@ -7,16 +7,14 @@
 
 
 class App extends React.Component {
-  
+  state = {}
   render() { 
     return ( 
       <>
       <h1>Lession 43 interaktywne menu dla restouracji cz.1</h1>
+      <h2>Menu</h2>
       </>
      );
   }
 }
- 
-  
 
-ReactDOM.render(<App />, document.getElementById("root"));
