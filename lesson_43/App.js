@@ -9,12 +9,12 @@
 class App extends React.Component {
   state = {
     items: [
-    { id: 1, name: "herbata", active: false},
+    { id: 1, name: "herbata", active: true},
     { id: 2, name: "ziemniaki", active: false},
-    { id: 3, name: "kasza", active: false},
+    { id: 3, name: "kasza", active: true},
     { id: 4, name: "zupa wodna", active: false},
     { id: 5, name: "wrzatek", active: false},
-    { id: 5, name: "chleb", active: false},
+    { id: 6, name: "chleb", active: true},
   ],
 
   }
@@ -23,7 +23,7 @@ class App extends React.Component {
       <React.Fragment>
       <h1>Lession 43/44/45 interaktywne menu dla restauracji cz.1</h1>
       <Header items={this.state.items} />
-      <ListItems />
+      <ListItems items={this.state.items} />
       </React.Fragment>
      );
   }
