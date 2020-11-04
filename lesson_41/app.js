@@ -4,21 +4,25 @@ const data = {
       id: 1,
       age: 29,
       name: "Arek",
+      sex: "male",
     },
     {
       id: 2,
       age: 49,
       name: "Marta",
+      sex: "female",
     },
     {
       id: 3,
       age: 19,
       name: "Stasia",
+      sex: "female",
     },
     {
         id: 4,
       age: 17,
       name: "Karol",
+      sex: "male",
     }
   ],
 };
