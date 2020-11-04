@@ -21,7 +21,7 @@ class App extends React.Component {
   render() { 
     return ( 
       <React.Fragment>
-      <h1>Lession 43/44/45 interaktywne menu dla restauracji cz.1</h1>
+      <h1>Lession 43/44/45/46 interaktywne menu dla restauracji cz.1</h1>
       <Header items={this.state.items} />
       <ListItems items={this.state.items} />
       </React.Fragment>
