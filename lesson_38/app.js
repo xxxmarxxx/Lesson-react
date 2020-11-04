@@ -11,7 +11,7 @@ class ListItems extends React.Component {
         return ( 
             
             <>
-            <h1>Lesson 38/39 - praca z tablicami</h1>
+            <h1>Lesson 38/39/40 - praca z tablicami</h1>
             <ul>
                 {Items}
             </ul>
