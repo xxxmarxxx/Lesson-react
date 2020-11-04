@@ -8,12 +8,17 @@
 }
 
 h1{
-    margin: 50px;
+    margin: 40px 0;
     text-align: center;
     color: #667292;
 }
+h2{
+    
+    text-align: center;
+    color: lightcoral;
+}
 ul{
-    margin-left: 40%;
+    
     color: #667292;
     font-size: 24px;
 }

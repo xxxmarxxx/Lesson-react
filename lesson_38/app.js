@@ -1,5 +1,5 @@
-const date = {
-  user: [
+const data = {
+  users: [
     {
       id: 1,
       age: 29,
@@ -17,16 +17,22 @@ const date = {
     },
   ],
 };
-const Item = (props) => <li>{`owoc ${props.content}`}</li>;
+
+const Item = (props) => (
+  <div>
+    <h1>Uzytkownik {props.user.name}</h1>
+    <h2>Ma {props.user.age}</h2>
+  </div>
+);
 
 class ListItems extends React.Component {
   //    state={
   //        items:["jablko", "sliwki", "gruszka",'orange']
   //    }
   render() {
-    const Items = this.state.items.map((item) => (
-      <Item key={item} content={item} />
-    ));
+    const users = this.props.data.users;
+    const Items = users.map(user => <Item key={user.id} user={user} />);
+
     return (
       <>
         <h1>Lesson 38/39/40 - praca z tablicami</h1>
@@ -36,4 +42,4 @@ class ListItems extends React.Component {
   }
 }
 
-ReactDOM.render(<ListItems />, document.getElementById("root"));
+ReactDOM.render(<ListItems data={data} />, document.getElementById("root"));
