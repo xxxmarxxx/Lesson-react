@@ -19,20 +19,20 @@ const data = {
       sex: "female",
     },
     {
-        id: 4,
+      id: 4,
       age: 17,
       name: "Karol",
       sex: "male",
-    }
+    },
   ],
 };
 
-const Item = ({user}) => (
+const Item = ({ user }) => (
   <div className="userInfo">
     <h1>{user.name}</h1>
     <p className="infoUser">Informacje o uzytkowniku</p>
-<p>Wiek uzytkownika: {user.age}</p>
-<p>Plec uzytkownika: {user.sex}</p>
+    <p>Wiek uzytkownika: <strong>{user.age}</strong></p>
+    <p>Plec uzytkownika: {user.sex}</p>
     {/* <h2>Ma {user.age}</h2> */}
   </div>
 );
@@ -41,9 +41,13 @@ class ListItems extends React.Component {
   //    state={
   //        items:["jablko", "sliwki", "gruszka",'orange']
   //    }
+  state={
+
+  }
   render() {
-    const users = this.props.data.users;
-    const Items = users.map(user => <Item key={user.id} user={user} />);
+    let users = this.props.data.users;
+    users = users.filter((user) => user.sex === "male");
+    const Items = users.map((user) => <Item key={user.id} user={user} />);
 
     return (
       <>

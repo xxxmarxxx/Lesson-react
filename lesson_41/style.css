@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background-color: #A7C04C;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 p{
     text-align: center;
