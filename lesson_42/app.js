@@ -31,30 +31,67 @@ const Item = ({ user }) => (
   <div className="userInfo">
     <h1>{user.name}</h1>
     <p className="infoUser">Informacje o uzytkowniku</p>
-    <p>Wiek uzytkownika: <strong>{user.age}</strong></p>
+    <p>
+      Wiek uzytkownika: <strong>{user.age}</strong>
+    </p>
     <p>Plec uzytkownika: {user.sex}</p>
     {/* <h2>Ma {user.age}</h2> */}
   </div>
 );
 
 class ListItems extends React.Component {
-  //    state={
-  //        items:["jablko", "sliwki", "gruszka",'orange']
-  //    }
-  state={
+  state = {
+    select: "all",
+  };
 
+  handleUsersFilter(option) {
+    this.setState({
+      select: option,
+    });
   }
-  render() {
-    let users = this.props.data.users;
-    users = users.filter((user) => user.sex === "male");
-    const Items = users.map((user) => <Item key={user.id} user={user} />);
 
+  usersList = () => {
+    let users = this.props.data.users;
+    switch (this.state.select) {
+      case "all":
+        return (users = users.map((user) => (
+          <Item user={user} key={user.Id} />
+        )));
+      case "female":
+        users = users.filter((user) => user.sex === "female");
+        return (users = users.map((user) => (
+          <Item user={user} key={user.Id} />
+        )));
+      case "male":
+        users = users.filter((user) => user.sex === "male");
+        return (users = users.map((user) => (
+          <Item user={user} key={user.Id} />
+        )));
+        default:
+          return "nic nie ma"
+    }
+  };
+
+  render() {
     return (
       <>
         <h1>Lesson 42 - praca z tablicami</h1>
-        <div>
+        <div className="btn">
+          <button onClick={this.handleUsersFilter.bind(this, "all")}>
+            Wszyscy
+          </button>
+          <button onClick={this.handleUsersFilter.bind(this, "female")}>
+            Kobiety
+          </button>
+          <button onClick={this.handleUsersFilter.bind(this, "male")}>
+            Mezczyzni
+          </button>
+          </div>
+            <div className="userData">
+              {this.usersList()}
+            </div>
           
-        </div>
+       
       </>
     );
   }

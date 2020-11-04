@@ -6,6 +6,18 @@
     font-family: 'Courier New', Courier, monospace;
     /* font-weight: 400; */
 }
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    font-size: 24px;
+    background-color: #FC7307;
+    padding: 10px;
+    color: #341C09;
+}
 p{
     text-align: center;
     color: #D4E4F7;
@@ -14,7 +26,8 @@ p{
 h1{
     margin: 40px 0;
     text-align: center;
-    color: #341C09;
+    /* color: #341C09; */
+    color:  #FC7307;
 }
 h2{
     
@@ -28,4 +41,9 @@ ul{
 }
 .infoUser{
     color: #FC7307;
+}
+.userData{
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
