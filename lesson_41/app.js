@@ -28,9 +28,12 @@ const data = {
 };
 
 const Item = ({user}) => (
-  <div>
-    <h1>Uzytkownik {user.name}</h1>
-    <h2>Ma {user.age}</h2>
+  <div className="userInfo">
+    <h1>{user.name}</h1>
+    <p className="infoUser">Informacje o uzytkowniku</p>
+<p>Wiek uzytkownika: {user.age}</p>
+<p>Plec uzytkownika: {user.sex}</p>
+    {/* <h2>Ma {user.age}</h2> */}
   </div>
 );
 

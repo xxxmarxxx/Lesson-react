@@ -6,6 +6,10 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
 }
+p{
+    text-align: center;
+    color: #EEF3DC;
+}
 
 h1{
     margin: 40px 0;
@@ -21,4 +25,7 @@ ul{
     
     color: #667292;
     font-size: 24px;
+}
+.infoUser{
+    color: #43778B;
 }
