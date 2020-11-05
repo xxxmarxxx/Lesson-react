@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lavender;
+}
+.title{
+    background-color: lawngreen;
+    padding: 30px;
+    text-align: center;
+    color: rgb(61, 12, 12);
+}
+h2{
+    text-align: center;
+    margin: 20px;
+    color: lightcoral;
+}
