@@ -8,29 +8,20 @@ class Form extends React.Component {
     number: "0"
    }
 
-handleCityChange = (e) => {
-  this.setState({
-    city: e.target.value,
-  })
-}
-handleTextChange = (e) => {
-  this.setState({
-    text: e.target.value,
-    
-  })
-}
-
-handleIsLovedChange = (e) => {
-  this.setState({
-isLoved: e.target.checked,
-  })
+handleChange = (e) => {
+  console.log(e.target.type);
+  if(e.target.type === "checkbox") {
+    this.setState({
+      [e.target.name] : e.target.checked
+    })
+  } else {
+    this.setState({
+      [e.target.name] : e.target.value
+    })
+  }
+  
 }
 
-handleVisitNumberChange (e) {
-  this.setState({
-number: e.target.value,
-  })
-}
 
   render() {
     return (
@@ -38,25 +29,25 @@ number: e.target.value,
       <h3 className="title">
           Witaj na lekcji 47 cz.1 komponent kontrolowany i niekontrolowany
         </h3>
-        <label>
+        <label className="lab">
           Podaj miasto
-          <input value={this.state.city} onChange={this.handleCityChange} type="text"/>
+          <input className="inputCity" name="city" value={this.state.city} onChange={this.handleChange} type="text"/>
         </label>
         <br/>
-        <label>
+        <label className="lab">
           Napisz mi cos o tym miescie
-          <textarea value={this.state.text} onChange={this.handleTextChange} type="text"/>
+          <textarea name="text" placeholder="Napisz mi..." value={this.state.text} onChange={this.handleChange} type="text"/>
         </label>
         <br/>
-        <label>
+        <label className="lab">
           czy lubisz to miasto?
-          <input type="checkbox" checked={this.state.isLoved}
-          onChange={this.handleIsLovedChange} />
+          <input className="isLoved" name="isLoved" type="checkbox" checked={this.state.isLoved}
+          onChange={this.handleChange} />
         </label>
         <br/>
-        <label>
+        <label className="lab">
           Ile razy byliscie w tym miescie?
-          <select value={this.state.number} onChange={this.handleVisitNumberChange.bind(this)}>
+          <select name="number" value={this.state.number} onChange={this.handleChange}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
