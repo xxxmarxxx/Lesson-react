@@ -18,12 +18,28 @@ class App extends React.Component {
   ],
 
   }
+
+  handleChangeStatus = (id) =>{
+    console.log(id);
+    const items = this.state.items.map(item => {
+      if (id === item.id) {
+        item.active = !item.active
+      }
+      return item
+    })
+    this.setState({
+      items
+    })
+
+  }
+
   render() { 
     return ( 
       <React.Fragment>
       <h1>Lession 43/44/45/46 interaktywne menu dla restauracji cz.1</h1>
       <Header items={this.state.items} />
-      <ListItems items={this.state.items} />
+      <ListItems items={this.state.items} changeStatus=
+      {this.handleChangeStatus} />
       </React.Fragment>
      );
   }
