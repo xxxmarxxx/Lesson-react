@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EEE6D0;
+    /* text-align: center; */
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+h3{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+form{
+    color: #461c2e ;
+    margin: 50px;
+}
+
+input{
+    font-size: 20px;
+    color:#b60e79 ;
+}
+.title{
+    background-color: #2B90DD;
+    color: #e6e1d7ee;
+    font-weight: 400;
+    text-align: center;
+}
+.button{
+    background-color: #E4FA71;
+    padding: 10px;
+}
