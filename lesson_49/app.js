@@ -24,6 +24,8 @@
 const Cash = (props)=> (
 <div> {props.title} <strong>{props.cash <= 0 ? "" : (props.cash / props.ratio).toFixed(2)}</strong></div>
 )
+}
+
 
 class ExchangeCounter extends React.Component {
   state = {
