@@ -11,6 +11,7 @@ li {
     line-height: 160%;
     padding: 20px 10px;
     cursor: pointer;
+
 }
 
 li:nth-child(even) {
@@ -33,4 +34,18 @@ h1 {
 h2 {
     text-align: center;
     color: rgb(95, 94, 123);
+}
+
+.enabled {
+    font-weight: bold;
+}
+
+.disabled {
+    color: rgb(128, 128, 128);
+}
+
+ul {
+    margin-left: 300px;
+    margin-right: 300px;
+    list-style-type: none;
 }
