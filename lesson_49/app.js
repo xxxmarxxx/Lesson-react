@@ -60,12 +60,15 @@ class ExchangeCounter extends React.Component {
             />
           </label>
           <div className="cash">
+              
           {/* <Dollars cash={amount} ratio={ratioDollar}/> */}
           {/* <Euros cash={amount}ratio={ratioEuro}/> */}
           {/* <Yuan cash={amount}ratio={ratioYuan}/> */}
-          <Cash cash={amount} ratio={ratioDollar} title="Wartosc w dollarach:"/>
+
+          {/* <Cash cash={amount} ratio={ratioDollar} title="Wartosc w dollarach:"/>
           <Cash cash={amount} ratio={ratioEuro} title="Wartosc w Euro:"/>
-          <Cash cash={amount} ratio={ratioYuan} title="Wartosc w Yuan:"/>
+          <Cash cash={amount} ratio={ratioYuan} title="Wartosc w Yuan:"/> */}
+
           </div>
         </div>
       </>
