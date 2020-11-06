@@ -16,7 +16,7 @@ class Draw extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <button onClick={this.handleShowOption}>Zobacz wrozbe</button>
+        <button onClick={this.handleShowOption}>Zobacz co mam!</button>
         <br />
         {this.state.option ? <h1>{this.state.option}</h1> : null}
       </div>
