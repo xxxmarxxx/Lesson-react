@@ -18,8 +18,16 @@ class List extends React.Component {
     ],
   };
 
-  handleDelete() {
-        console.log("klikniete");
+  handleDelete(id){
+        // console.log(this, id);
+        const people = [...this.state.people]
+        const index = people.findIndex( person => person.id === id)
+        console.log(index);
+        console.log(people);
+        people.splice(index,1)
+        this.setState({
+            people
+        })
   }
 
   render() {
