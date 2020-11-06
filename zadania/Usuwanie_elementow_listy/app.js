@@ -2,7 +2,9 @@ const Person = (props) => {
   return (
     <li>
       <span>{props.name}</span>
-      <button onClick={props.delete}>Usun</button>
+      
+      <button onClick={props.delete}>delete</button>
+      
     </li>
   );
 };
@@ -10,9 +12,9 @@ const Person = (props) => {
 class List extends React.Component {
   state = {
     people: [
-      { id: 1, name: "Jan K." },
+      { id: 1, name: "Janek K." },
       { id: 2, name: "Piotr T." },
-      { id: 3, name: "Mariusz O." },
+      { id: 3, name: "Mario O." },
       { id: 4, name: "Pawel K." },
     ],
   };
@@ -30,8 +32,14 @@ class List extends React.Component {
 //   }
 
   handleDelete(name){
-      let people = Array.from(this.state.people)
-      console.log(people);
+    //   let people = Array.from(this.state.people);
+      let people = this.state.people.slice();
+    //   console.log(people);
+    people = people.filter(person => name !== person.name)
+    console.log(people);
+    this.setState({
+        people
+    })
   }
 
   render() {
@@ -53,7 +61,7 @@ class List extends React.Component {
     return (
       <>
         <section>
-          <h1>Zadanie - usuwanie elementu listy</h1>
+          <h1>Zadanie 56 - usuwanie elementu listy</h1>
           <ul>{people}</ul>
         </section>
       </>
