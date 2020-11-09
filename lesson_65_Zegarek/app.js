@@ -1,10 +1,33 @@
-class Clock extends React.Component {
+class App extends React.Component {
+  state = {
+    active: true,
+  };
 
-  interval = ""
+  handleClick = () => {
+    this.setState((state) => ({
+      active: !state.active,
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <SwitchButton active={this.state.active} click={this.handleClick} />
+        {this.state.active && <Clock />}
+      </div>
+    );
+  }
+}
+
+const SwitchButton = (props) => (
+  <button onClick={props.click}>{props.active ? "Wylacz" : "Wlacz"}</button>
+);
+
+class Clock extends React.Component {
+  // interval = "";
 
   state = {
-      time: this.getTime()
-
+    time: this.getTime(),
   };
 
   // const getSeconds = getSeconds=()=>{
@@ -13,45 +36,44 @@ class Clock extends React.Component {
   //   return i;
   // }
 
-  getTime(){
+  getTime() {
     const currentTime = new Date();
     // console.log(currentTime);
-    return({
+    return {
       hours: currentTime.getHours(),
       minutes: currentTime.getMinutes(),
       seconds: currentTime.getSeconds(),
-    })
+    };
   }
 
-  setTime(){
+  setTime() {
     // console.log(this);
-    const time = this.getTime()
-    this.setState({ time })
+    const time = this.getTime();
+    this.setState({ time });
   }
   componentDidMount() {
-    this.interval = setInterval(this.setTime.bind(this), 1000)
+    console.log("zegarek wyswietlony");
+    this.interval = setInterval(this.setTime.bind(this), 1000);
     // console.log(index);
   }
 
- componentWillUnmout() {
-   clearInterval(this.interval)
-
- }
+  componentWillUnmount() {
+    console.log("zegarek usuniety");
+    clearInterval(this.interval);
+  }
 
   render() {
     // this.getTime()
-    const {hours,minutes,seconds} = this.state.time
+    const { hours, minutes, seconds } = this.state.time;
     return (
       <>
-      <h1>Lesson 65 Zegarek</h1>
-      <div className="clock">
-      {hours} : {minutes} : {seconds}
-      </div>
-      
-
+        <h1>Lesson 65/66 Zegarek</h1>
+        <div className="clock">
+          {hours} : {minutes} : {seconds}
+        </div>
       </>
-    )
+    );
   }
 }
 
-ReactDOM.render(<Clock />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
