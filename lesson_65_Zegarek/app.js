@@ -69,7 +69,7 @@ class Clock extends React.Component {
       <>
         <h1>Lesson 65/66 Zegarek</h1>
         <div className="clock">
-          {hours} : {minutes} : {seconds}
+          {hours} : {minutes > 9 ? minutes : `0${minutes}`} : {seconds > 9 ? seconds : `0${seconds}`}
         </div>
       </>
     );
