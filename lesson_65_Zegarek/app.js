@@ -12,8 +12,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>Lesson 65/66 Zegarek</h1>
         <SwitchButton active={this.state.active} click={this.handleClick} />
         {this.state.active && <Clock />}
+        
       </div>
     );
   }
@@ -67,7 +69,7 @@ class Clock extends React.Component {
     const { hours, minutes, seconds } = this.state.time;
     return (
       <>
-        <h1>Lesson 65/66 Zegarek</h1>
+        
         <div className="clock">
           {hours} : {minutes > 9 ? minutes : `0${minutes}`} : {seconds > 9 ? seconds : `0${seconds}`}
         </div>
