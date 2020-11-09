@@ -4,14 +4,14 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    console.log("Aplikacja zamontowana");
+    // console.log("Aplikacja zamontowana");
   }
   componentDidUpdate() {
-    console.log("Aplikacja aktualizowana");
+    // console.log("Aplikacja aktualizowana");
   }
 
   render() {
-    console.log("renderowanie aplikacji");
+    // console.log("renderowanie aplikacji");
     return (
       <>
         <h1>Lesson 63 Cykl zycia Button</h1>
@@ -34,13 +34,13 @@ class App extends React.Component {
 
 class Child1 extends React.Component {
   componentDidMount() {
-    console.log("Child1 zamontowana");
+    // console.log("Child1 zamontowana");
   }
   componentDidUpdate() {
-    console.log("Child1 aktualizowana");
+    // console.log("Child1 aktualizowana");
   }
   render() {
-    console.log("renderowanie Child1");
+    // console.log("renderowanie Child1");
     return <div>{String(this.props.status)}</div>;
   }
 }
@@ -52,9 +52,14 @@ class Child2 extends React.Component {
   componentDidUpdate() {
     console.log("Child2 aktualizowana");
   }
+  componentWillUnmount(){
+    console.log("Child2 odmontowany");
+  }
 
   state = {};
+
   render() {
+    console.log("renderowanie Child2");
     return <div>Komponent Child2 zamontowany</div>;
   }
 }
