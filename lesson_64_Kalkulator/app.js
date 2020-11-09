@@ -10,10 +10,19 @@ class App extends React.Component {
       {
         result: state.result * state.ratio
       }))
+      console.log(this.state);
   }
 
   componentDidUpdate(){
-    console.log(this.state);
+    if(this.state.result > 1000 && this.state.ratio === 2){
+      this.setState({
+        ratio: 0.5
+      })
+    } else if(this.state.result < 1 && this.state.ratio === 0.5){
+      this.setState({
+        ratio: 2
+      })
+    }
   }
 
   render() {
