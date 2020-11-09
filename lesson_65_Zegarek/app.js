@@ -1,19 +1,45 @@
 class Clock extends React.Component {
+
+  interval = ""
+
   state = {
-      time: {
-        hours: 12,
-        minutes: 34,
-        seconds: 15,
-      }
+      time: this.getTime()
+
   };
+
+  // const getSeconds = getSeconds=()=>{
+  //   if(i < 10) {
+  //     i = "0" + i;
+  //   return i;
+  // }
 
   getTime(){
     const currentTime = new Date();
-    console.log(currentTime);
+    // console.log(currentTime);
+    return({
+      hours: currentTime.getHours(),
+      minutes: currentTime.getMinutes(),
+      seconds: currentTime.getSeconds(),
+    })
   }
 
+  setTime(){
+    // console.log(this);
+    const time = this.getTime()
+    this.setState({ time })
+  }
+  componentDidMount() {
+    this.interval = setInterval(this.setTime.bind(this), 1000)
+    // console.log(index);
+  }
+
+ componentWillUnmout() {
+   clearInterval(this.interval)
+
+ }
+
   render() {
-    this.getTime()
+    // this.getTime()
     const {hours,minutes,seconds} = this.state.time
     return (
       <>
