@@ -18,11 +18,16 @@ button{
     font-size: 18px;
 }
 .clock{
-    color: lightcyan;
-    font-size: 24px;
+    color: rgb(255, 0, 111);
+    font-size: 30px;
+    width: 300px;
+    height: 300px;
+    color: #FFFFFF;
+    background: #912C22;
+    text-shadow: 0 0 10px #FFFFFF;
     background-color: rgb(31, 16, 16);
     border: solid 30px #81a1ac;
-    padding: 90px 0;
-    margin: 0 200px;
+    padding-top: 100px;
+    margin: auto;
     border-radius: 300px;
 }
