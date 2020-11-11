@@ -1,16 +1,43 @@
-import React, { Component } from 'react';
-import './App.css';
-
+import React, { Component } from "react";
+import "./App.css";
+import Word from "./Word";
 
 class App extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className="App">
-            App fetch
-          </div>
-     );
+  state = {
+    words: [] /* zadanie AJAX */,
+    isLoaded: false,
+  };
+
+  componentDidMount() {
+    setTimeout(this.fetchData, 3000)
+    
+  }
+
+  fetchData = ()=> {
+    fetch('data/words.json')
+    .then(response => response.json() )
+    .then(data => {
+      this.setState({
+        words: data.words,
+        isLoaded: true
+      })
+    })
+  }
+
+  render() {
+    console.log("render");
+    const words = this.state.words.map(word => (
+      <Word key={word.id} english={word.en} polish={word.pl}/>
+    ))
+    return (
+      <>
+      <h1>lesson 76 JSON i metoda fetch</h1>
+       <ul className="App">
+         {this.state.isLoaded ? words : "Wczytuje dane"}
+         </ul>
+         </>
+       );
   }
 }
- 
+
 export default App;
