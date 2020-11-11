@@ -1,19 +1,21 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 .App {
   background-color: rgb(228, 240, 250);
 }
 
-h1{
+h1 {
   padding: 10px;
   background-color: rgb(128, 159, 185);
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 }
-ul{
+
+ul {
   margin: 20px 150px;
   padding: 20px 50px;
   border: solid .5px rgb(201, 201, 201);
@@ -21,4 +23,8 @@ ul{
   flex-direction: column;
   align-items: center; */
   background-color: rgb(187, 214, 238);
+}
+
+p {
+  color: rgb(215, 132, 30);
 }
