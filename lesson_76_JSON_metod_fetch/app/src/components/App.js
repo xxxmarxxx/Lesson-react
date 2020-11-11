@@ -9,7 +9,18 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // setTimeout(this.fetchData, 3000)
+    setTimeout(this.fetchData, 3000)
+    // fetch('data/words.json')
+    // .then(response => response.json() )
+    // .then(data => {
+    //   this.setState({
+    //     words: data.words,
+    //     isLoaded: true
+    //   })
+    // })
+  }
+
+  fetchData = ()=> {
     fetch('data/words.json')
     .then(response => response.json() )
     .then(data => {
@@ -18,10 +29,6 @@ class App extends Component {
         isLoaded: true
       })
     })
-  }
-
-  fetchData = ()=> {
-    
   }
 
   render() {
@@ -33,7 +40,7 @@ class App extends Component {
       <>
       <h1>lesson 76 JSON i metoda fetch</h1>
        <ul className="App">
-         {this.state.isLoaded ? words : "Wczytuje dane"}
+         {this.state.isLoaded ? words : <p>"Wczytuje dane !!" </p>}
          </ul>
          </>
        );
