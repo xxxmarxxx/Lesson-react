@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  margin: 50px;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(133, 161, 155);
+}
