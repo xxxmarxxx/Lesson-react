@@ -5,13 +5,32 @@
 }
 
 .App {
-  margin: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 
 h1{
   font-family: 'Courier New', Courier, monospace;
+  
   padding: 10px;
   text-align: center;
   background-color: rgb(133, 161, 155);
+}
+h4{
+  text-decoration: underline;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+p{
+  margin-top: 15px;
+}
+p>Username{
+  color: red;
+}
+.users {
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgb(225, 235, 233);
+  padding-bottom: 15px;
+  margin: 0 auto;
 }
