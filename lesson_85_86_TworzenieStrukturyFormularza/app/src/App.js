@@ -9,6 +9,11 @@ class App extends Component {
     accept: false,
   };
 
+  messages = {
+    username_incorrect: 'Imie ma miec 10 liter',
+    email_incorrect: 'Brak @ w emailu'
+  }
+
   handleChange = (e) => {
     // console.log(e.target.type);
     // console.log(e.target.name);
