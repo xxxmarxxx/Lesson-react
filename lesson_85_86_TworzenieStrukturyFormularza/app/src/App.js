@@ -17,10 +17,10 @@ class App extends Component {
   };
 
   messages = {
-    username_incorrect: 'Imie ma miec 10 liter',
-    email_incorrect: 'Brak @ w emailu',
-    pass_incorrect: 'Haslo musi miec 8 znakow',
-    accept_incorrect: 'Nie ma potwierdzenia zgody'
+    username_incorrect: '- Imie ma miec 10 liter!',
+    email_incorrect: '- Brak @ w emailu!',
+    pass_incorrect: '- Haslo musi miec 8 znakow!',
+    accept_incorrect: '- Nie ma potwierdzenia zgody !'
   }
 
   handleChange = (e) => {
@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>Lesson 85-86 Formularz z validation</h1>
+        <h1>Lesson 85/86/87/88 Formularz z validation</h1>
         <div className="App">
           <form onSubmit={this.handelSubmit} noValidate>
             <label htmlFor="user">
