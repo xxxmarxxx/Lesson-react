@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import UsersList from "./UsersList";
-import ButtonFetchUsers from "./ButtonFetchUsers";
+import UsersList from "./UsersList2";
+import ButtonFetchUsers from "./ButtonFetchUsers2";
 
-const API = "https://randomuser.me/api/?results=5";
+const API = "https://randomuser.me/api/?results=1";
 
 class App extends Component {
   state = {
-    users: null,
+    users: [],
   };
   handleDataFetch = () => {
     // console.log("click");
@@ -20,10 +20,10 @@ class App extends Component {
     })
     .then(response =>response.json())
     .then(data => {
-      console.log(data);
-      this.setState({
-        users: data.results
-      })
+      const user = data.results;
+      this.setState(prevState => ({
+        users: prevState.users.concat(user)
+      }))
     })
     .catch(error => console.log(error))
   }
@@ -32,9 +32,9 @@ class App extends Component {
     const users = this.state.users;
     return (
       <div className="App">
-        <h1>Lesson 78 cz.1 Fetch in practice</h1>
+        <h1>Lesson 78 cz.2 Fetch in practice</h1>
         <ButtonFetchUsers click={this.handleDataFetch}/>
-        {users ? <UsersList users={users}/> : users}
+        {users.length > 0 ? <UsersList users={users}/> : users}
       </div>
     );
   }

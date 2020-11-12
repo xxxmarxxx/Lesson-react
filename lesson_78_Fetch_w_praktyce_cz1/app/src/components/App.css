@@ -4,7 +4,11 @@
   box-sizing: border-box;
   background-color:  #E9E7E1;
 }
-
+ img{
+   margin-top: 40px;
+   border: solid 7px;
+   border-radius: 80px;
+ }
 
 .App {
   text-align: center;
@@ -33,6 +37,4 @@ h3{
    border-radius: 10px;
    background-color: #3A5351;
  }
- p{
-   
- }
+ 
