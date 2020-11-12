@@ -5,26 +5,44 @@ class App extends Component {
   state = {
     username: "",
     email: "",
+    pass: "",
+    accept: false,
   };
 
   handleChange = (e) => {
-    console.log(e.target.type);
-    console.log(e.target.name);
-    const name = e.target.name
-    const value = e.target.value;
-    this.setState({
-      [name]: value,
+    // console.log(e.target.type);
+    // console.log(e.target.name);
+    const name = e.target.name;
+    const type = e.target.type;
+    if(type === "text" || type === "password" || type === "email") {
+      const value = e.target.value;
+      // const checked = e.target.checked;
+      this.setState({
+        [name]: value,
+      });
+    } else if(type === "checkbox") {
+      const checked = e.target.checked;
+      console.log(checked);
+      this.setState({
+      [name]: checked,
     });
+    // console.log(type);
   };
+}
+
+  handelSubmit = (e)=> {
+    e.preventDefault()
+    console.log("dziala");
+  }
 
   render() {
     return (
       <>
         <h1>Lesson 85-86 Formularz z validation</h1>
         <div className="App">
-          <form>
+          <form onSubmit={this.handelSubmit} noValidate>
             <label htmlFor="user">
-              Twoje imie:
+              Podaj imie:
               <input
                 type="text"
                 id="user"
@@ -33,7 +51,7 @@ class App extends Component {
                 onChange={this.handleChange}
               />
               <label htmlFor="email">
-                Twoj adress email:
+                Podaj email:
                 <input
                   type="email"
                   id="email"
@@ -43,16 +61,27 @@ class App extends Component {
                 />
               </label>
             </label>
-            <label htmlFor="user">
-              Twoje imie:
+            <label htmlFor="password">
+              Podaj haslo:
               <input
-                type="text"
-                id="user"
-                name="username"
-                value={this.state.username}
+                type="password"
+                id="password"
+                name="pass"
+                value={this.state.pass}
                 onChange={this.handleChange}
               />
             </label>
+            <label htmlFor="accept">
+            <input 
+            type="checkbox" 
+            id="accept" 
+            name="accept" 
+            checked={this.state.accept} 
+            onChange={this.handleChange}
+            /> 
+            Wyrazam zgode
+            </label>
+            <button>Zapisz sie</button>
           </form>
         </div>
       </>
