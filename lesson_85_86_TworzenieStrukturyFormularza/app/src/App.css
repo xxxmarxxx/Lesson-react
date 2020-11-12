@@ -25,8 +25,8 @@ input[type="checkbox"]{
 }
 
 form{
-  text-align: right;
-  margin: 20px 200px;
+  text-align: left;
+  margin: 20px 40px;
 }
 label{
   display: block;
@@ -39,4 +39,10 @@ button{
   margin: 20px 0;
   border-radius: 20px;
   background-color: rgb(181, 150, 109);
+}
+span{
+  color: rgb(46, 52, 158);
+  font-size: 14px;
+  margin-left: 20px;
+
 }
