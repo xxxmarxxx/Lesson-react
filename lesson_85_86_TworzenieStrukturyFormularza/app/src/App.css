@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: burlywood;
   font-family: 'Courier New', Courier, monospace;
+}
+body{
+  background-color: burlywood;
 }
 .App {
   text-align: center;
   /* margin: 0px 20px; */
+  
 }
-h1{
+h1,h3{
   background-color: rgb(109, 90, 66);
   text-align: center;
   padding: 10px;
   color: burlywood;
+  font-weight: 400;
 }
 input{
   margin-left: 20px;
@@ -26,7 +30,7 @@ input[type="checkbox"]{
 
 form{
   text-align: left;
-  margin: 20px 40px;
+  margin: 20px 200px 20px;
 }
 label{
   display: block;
@@ -44,5 +48,4 @@ span{
   color: rgb(46, 52, 158);
   font-size: 16px;
   margin-left: 20px;
-
 }
