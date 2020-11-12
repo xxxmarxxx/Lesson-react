@@ -7,11 +7,20 @@ class App extends Component {
     email: "",
     pass: "",
     accept: false,
+
+    errors: {
+      username: true,
+      email: true,
+      pass: true,
+      accept: true,
+    }
   };
 
   messages = {
     username_incorrect: 'Imie ma miec 10 liter',
-    email_incorrect: 'Brak @ w emailu'
+    email_incorrect: 'Brak @ w emailu',
+    pass_incorrect: 'Haslo musi miec 8 znakow',
+    accept_incorrect: 'Nie ma potwierdzenia zgody'
   }
 
   handleChange = (e) => {
@@ -55,6 +64,9 @@ class App extends Component {
                 value={this.state.username}
                 onChange={this.handleChange}
               />
+              {this.state.errors.username && <span>
+              {this.messages.username_incorrect}</span>}
+              </label>
               <label htmlFor="email">
                 Podaj email:
                 <input
@@ -64,8 +76,9 @@ class App extends Component {
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
+                {this.state.errors.email && <span>
+                {this.messages.email_incorrect}</span>}
               </label>
-            </label>
             <label htmlFor="password">
               Podaj haslo:
               <input
@@ -75,6 +88,8 @@ class App extends Component {
                 value={this.state.pass}
                 onChange={this.handleChange}
               />
+              {this.state.errors.pass && <span>
+              {this.messages.pass_incorrect}</span>}
             </label>
             <label htmlFor="accept">
             <input 
@@ -85,6 +100,8 @@ class App extends Component {
             onChange={this.handleChange}
             /> 
             Wyrazam zgode
+            {this.state.errors.accept && <span>
+            {this.messages.accept_incorrect}</span>}
             </label>
             <button>Zapisz sie</button>
           </form>
