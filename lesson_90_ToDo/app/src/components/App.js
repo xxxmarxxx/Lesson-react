@@ -52,12 +52,20 @@ class App extends Component {
     ]
   };
 
+  deleteTask = (id) => {
+      console.log('delete elementu o id' + id)
+  }
+  changeTaskStatus = (id) => {
+    console.log('change w stanie elementu o id' + id)
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Lesson 90/91/92 - ToDo App</h1>
         <AddTask />
-        <TaskList tasks={this.state.tasks} />
+        <TaskList tasks={this.state.tasks} delete={this.deleteTask}
+        change={this.changeTaskStatus}/>
       </div>
     );
   }
