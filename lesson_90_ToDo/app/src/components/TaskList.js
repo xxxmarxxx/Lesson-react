@@ -6,6 +6,8 @@ const TaskList = () => {
         <div>
            <h2>Lista Taskow</h2> 
            <Task />
+           <Task />
+           <Task />
         </div>
      );
 }
