@@ -2,15 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.form{
-  padding: 10px 0px;
-  margin: 10px 0 20px;
-  background-color: bisque;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 h1 {
-  padding: 20px;
+  padding: 20px 10px;
   background-color: rgb(225, 186, 186);
   font-weight: 400;
   border-bottom: 1px solid rgb(135, 114, 114);
@@ -33,4 +30,15 @@ h3{
   width: 60%;
   border-radius: 10px;
   background-color: #deeded;
+}
+.form{
+  padding: 10px;
+  margin: 10px 0 20px;
+  background-color: bisque;
+}
+.form button{
+padding: 3px 10px;
+text-transform: uppercase;
+margin: 20px;
+font-size: 20px;
 }
