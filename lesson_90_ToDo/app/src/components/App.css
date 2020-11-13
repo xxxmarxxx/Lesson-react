@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 20px;
+  background-color: rgb(225, 186, 186);
+  font-weight: 400;
+  border-bottom: 1px solid rgb(135, 114, 114) ;
+}
+
+.App {
+  text-align: center;
+}
