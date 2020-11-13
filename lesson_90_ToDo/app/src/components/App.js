@@ -10,7 +10,7 @@ class App extends Component {
         id: 0,
         text: 'zagrac w pilke',
         date: '2020-12-15',
-        important: true,
+        important: false,
         active: true,
         finishDate: null
       },
@@ -18,7 +18,7 @@ class App extends Component {
         text: 'polmalowac pokoj',
         date: '2020-12-20',
         important: true,
-        active: false,
+        active: true,
         finishDate: null
       },
       {id: 2,
