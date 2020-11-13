@@ -60,6 +60,9 @@ class App extends Component {
       // console.log(index);
       tasks.splice(index, 1);
       // console.log(tasks);
+      this.setState({
+        tasks
+      })
   }
   changeTaskStatus = (id) => {
     console.log('change w stanie elementu o id' + id);
