@@ -53,10 +53,16 @@ class App extends Component {
   };
 
   deleteTask = (id) => {
-      console.log('delete elementu o id' + id)
+      console.log('delete elementu o id' + id);
+      const tasks = [...this.state.tasks];
+      // console.log(tasks);
+      const index = tasks.findIndex(task => task.id === id);
+      // console.log(index);
+      tasks.splice(index, 1);
+      // console.log(tasks);
   }
   changeTaskStatus = (id) => {
-    console.log('change w stanie elementu o id' + id)
+    console.log('change w stanie elementu o id' + id);
   }
 
   render() {
