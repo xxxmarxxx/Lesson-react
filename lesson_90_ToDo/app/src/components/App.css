@@ -3,17 +3,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+.form{
+  padding: 10px 0px;
+  margin: 10px 0 20px;
+  background-color: bisque;
+}
 
 h1 {
   padding: 20px;
   background-color: rgb(225, 186, 186);
   font-weight: 400;
-  border-bottom: 1px solid rgb(135, 114, 114) ;
+  border-bottom: 1px solid rgb(135, 114, 114);
 }
 
 .App {
   text-align: center;
 }
-.task{
-padding: 10px;
+h3{
+  margin: 20px 0;
+}
+.lastTasks{
+  font-size: 12px;
+  font-style: italic;
+}
+
+.task {
+  margin: 5px auto;
+  padding: 14px;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #deeded;
 }

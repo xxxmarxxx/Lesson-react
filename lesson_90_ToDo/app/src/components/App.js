@@ -18,7 +18,7 @@ class App extends Component {
         text: 'polmalowac pokoj',
         date: '2020-12-20',
         important: true,
-        active: true,
+        active: false,
         finishDate: null
       },
       {id: 2,
