@@ -28,7 +28,6 @@ class AddTask extends Component {
 
   handleClick = () => {
     console.log("dodaj");
-    
     const { text, checked, date } = this.state;
     if(text.length > 2){
     const add = this.props.add(text, date, checked);
