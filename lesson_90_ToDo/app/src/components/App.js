@@ -4,6 +4,7 @@ import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 
 class App extends Component {
+  counter = 6
   state = {
     tasks: [
       {
@@ -49,6 +50,7 @@ class App extends Component {
         active: true,
         finishDate: null
       },
+      
     ]
   };
 
@@ -74,6 +76,7 @@ class App extends Component {
       })
 
   }
+
   changeTaskStatus = (id) => {
     console.log('change w stanie elementu o id' + id);
     const tasks = Array.from(this.state.tasks);
@@ -89,12 +92,34 @@ class App extends Component {
 
   }
 
+  addTask = (text, date, important)=> {
+    console.log("dodany objekt"); 
+    const task = {
+        id: this.counter,
+        text, // text z inputa
+        date,// text z inputa
+        important,// text z inputa
+        active: true,
+        finishDate: null
+    }
+    this.counter++
+    console.log(task, this.counter)
+
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+
+    }))
+
+    return true
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>Lesson 90-98 - ToDo App</h1>
+        <h1>Lesson 90-99 - ToDo App</h1>
         <h2 style={{margin: 20}}>ToDo APP</h2>
-        <AddTask />
+
+        <AddTask add={this.addTask}/>
         <TaskList tasks={this.state.tasks} delete={this.deleteTask}
         change={this.changeTaskStatus}/>
       </div>
