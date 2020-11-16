@@ -24,9 +24,11 @@ class App extends Component {
           {/* <li><a href="/">Start</a></li>
           <li><a href="/news">Aktualnosci</a></li>
           <li><a href="/contact">Kontakt</a></li> */}
-          <li><NavLink to="/" exact>Start</NavLink></li>
-          <li><NavLink to="/news">Aktualnosci</NavLink></li>
-          <li><NavLink to="/contact">Kontakt</NavLink></li>
+          <li><NavLink to="/" exact activeClassName="home_selected">Start</NavLink></li>
+          <li><NavLink to="/news" activeClassName="news_selected">Aktualnosci</NavLink></li>
+          <li><NavLink to="/contact" activeClassName="contact_selected" activeStyle={{
+            backgroundColor: '#0e4054',
+            letterSpacing: '4px'}}>Kontakt</NavLink></li>
         </ul>
         </nav>
       </header>
