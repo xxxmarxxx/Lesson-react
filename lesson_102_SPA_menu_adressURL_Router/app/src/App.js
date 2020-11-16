@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Link, NavLink, Route} from 'react-router-dom'
 
 const Home = () => {
   // console.log("renderuje");
@@ -24,9 +24,9 @@ class App extends Component {
           {/* <li><a href="/">Start</a></li>
           <li><a href="/news">Aktualnosci</a></li>
           <li><a href="/contact">Kontakt</a></li> */}
-          <li><Link to="/">Start</Link></li>
-          <li><Link to="/news">Aktualnosci</Link></li>
-          <li><Link to="/contact">Kontakt</Link></li>
+          <li><NavLink to="/" exact>Start</NavLink></li>
+          <li><NavLink to="/news">Aktualnosci</NavLink></li>
+          <li><NavLink to="/contact">Kontakt</NavLink></li>
         </ul>
         </nav>
       </header>
