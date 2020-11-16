@@ -3,28 +3,58 @@
   padding: 0;
   box-sizing: border-box;
 }
-  
-h1{
-  text-align: center ;
+
+.App {
+  background-color: #EDF6CC;
+  height: 600px;
+}
+
+.lesson {
+  font-weight: 400;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  color: #347B98 ;
+  color: #347B98;
+}
+p{
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+  color: #092834;
 }
 
 section {
-  padding-top: 30px;
-  background-color: burlywood;
+  padding: 60px;
+  margin: 50px auto;
+  border-radius: 20px;
+  width: 600px;
+  /* background-color: #B1D62E */
+
 }
+
 nav {
   background-color: #092834;
 }
+
 ul {
   display: flex;
   list-style-type: none;
 }
+
 li {
   flex-grow: 1;
 }
-a{
+
+h1 {
+  letter-spacing: 10px;
+  color: #0e4054;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
   display: block;
   font-family: 'Courier New', Courier, monospace;
   padding: 15px 15px;
@@ -35,10 +65,11 @@ a{
   border-bottom: 4px solid #092834;
 }
 
-a:hover{
+a:hover {
   color: #FE2712;
   /* border-bottom-color: #FE2712; */
 }
+
 /* .active{
   border-bottom-color: #FE2712;
 } */
@@ -47,11 +78,13 @@ a:hover{
   letter-spacing: 4px;
   border-bottom-color: #FE2712;
 }
+
 .news_selected {
   background-color: #0e4054;
   letter-spacing: 4px;
   border-bottom-color: #fec712;
 }
+
 .contact_selected {
   border-bottom-color: #1efe12;
 }
