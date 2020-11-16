@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+
+const Home = () => {
+  // console.log("renderuje");
+ return (
+<h1>Strona Startowa</h1>
+ );
+}
+const News = () => <h1>Aktualnosci</h1>
+const Contact = () => <h1>Kontakt</h1>
 
 class App extends Component {
   state = {  }
   render() { 
     return ( 
-      <BrowserRouter>
+      <Router>
       <div className="App">
       <header>
+        <h1>Lesson 102/103</h1>
         <nav>
         <ul>
-          
           {/* <li><a href="/">Start</a></li>
           <li><a href="/news">Aktualnosci</a></li>
           <li><a href="/contact">Kontakt</a></li> */}
@@ -22,11 +31,14 @@ class App extends Component {
         </nav>
       </header>
       <section>
-        Strona - Witaj
+        <Route path="/" exact component={Home}/>
+        <Route path="/news" component={News}/>
+        <Route path="/contact" component={Contact}/>
+        
       </section>
     </div>
     
-    </BrowserRouter>
+    </Router>
      );
   }
 }
