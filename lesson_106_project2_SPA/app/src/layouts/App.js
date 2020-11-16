@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 
 class App extends Component {
   state = {  }
   render() { 
     return ( 
       <div className="App">
-        welcome
+        SPA
       </div>
      );
   }
