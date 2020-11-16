@@ -12,6 +12,8 @@ header {
   flex-basis: 30vh;
   background-color: darkolivegreen;
   color: burlywood;
+  position: relative;
+  overflow: hidden;
 }
 
 main {
