@@ -10,7 +10,7 @@ div.app {
 
 header {
   flex-basis: 30vh;
-  background-color: darkolivegreen;
+  /* background-color: rgba(85, 107, 47, 0.16); */
   color: burlywood;
   position: relative;
   overflow: hidden;
@@ -20,7 +20,7 @@ main {
   display: flex;
   flex-grow: 1;
   padding: 30px 0;
-  background-color: cadetblue;
+  background-color: rgba(181, 181, 181, 0.468);
 }
 
 aside {
