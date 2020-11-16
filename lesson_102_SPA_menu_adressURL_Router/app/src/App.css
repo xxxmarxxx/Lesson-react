@@ -39,6 +39,19 @@ a:hover{
   color: #FE2712;
   /* border-bottom-color: #FE2712; */
 }
-.active{
+/* .active{
   border-bottom-color: #FE2712;
+} */
+.home_selected {
+  background-color: #0e4054;
+  letter-spacing: 4px;
+  border-bottom-color: #FE2712;
+}
+.news_selected {
+  background-color: #0e4054;
+  letter-spacing: 4px;
+  border-bottom-color: #fec712;
+}
+.contact_selected {
+  border-bottom-color: #1efe12;
 }
