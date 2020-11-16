@@ -1,0 +1,42 @@
+
+nav.main{
+    /* background-color: brown; */
+    padding: 0 40px 20px 0;
+}
+.main ul {
+    list-style: none;
+}
+
+nav.main a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(206, 206, 106);
+    font-weight: 200;
+    padding: 10px;
+    transition: .2s;
+    
+}
+nav.main a:hover{
+    background-color: rgba(222, 184, 135, 0.29);
+    border-radius: 0px 20px 20px 0px;
+    transform: translateX(20px);
+}
+nav.main a.active{
+    color: rgb(255, 255, 255);
+    border-left: 10px rgb(83, 82, 82) solid ;
+    transform: translateX(0px);
+}
+
+nav.main li:nth-child(1) a.active {
+    border-left-color: darkorange;
+}
+nav.main li:nth-child(2) a.active {
+    border-left-color: rgb(255, 225, 0);
+}
+nav.main li:nth-child(3) a.active {
+    border-left-color: rgb(247, 0, 255);
+}
+nav.main li:nth-child(4) a.active {
+    border-left-color: rgb(255, 0, 0);
+}
