@@ -1,0 +1,18 @@
+tr{
+    width: 10px;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+}
+td{
+    padding: 20px;
+    border: none;
+}
+tbody{
+
+    border: none;
+}
+table, th, td, caption {
+    border: 0px;
+    font-family: 'Courier New', Courier, monospace;
+  }
