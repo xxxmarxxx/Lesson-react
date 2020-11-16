@@ -6,7 +6,7 @@ const list = [
   {name: "start",path: "/", exact: true},
   {name: "produkty",path: "/products"},
   {name: "Kontakt",path: "/contact"},
-  {name: "panel admin",path: "/admin"},
+  {name: "panelAdmin",path: "/admin"},
 ]
 
 const Navigation = ()=> {
