@@ -21,7 +21,7 @@ const Navigation = ()=> {
   <nav className="main">
     <ul>
     {menu}
-    </ul>‚
+    </ul>
   </nav>
   )
 };
