@@ -1,3 +1,4 @@
+
 // komponent funkcyjny, bestanowy
 
 const Header = () => {
