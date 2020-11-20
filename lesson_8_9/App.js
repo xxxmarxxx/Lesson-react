@@ -5,7 +5,7 @@ const classBig = "big"
 
 const handleClick = () => alert("klick!")
 const main = (
-  <div>
+  <div className="main">
     <h1 person="osoby" onClick={handleClick} className="red">Pierwszy artykul</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facere
@@ -18,7 +18,7 @@ const main = (
 
 const text = "stopka footer";
 
-const largeTxt = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, fugit non. Necessitatibus dolorum nesciunt fugiat vitae ipsum deleniti quaerat odio, similique veniam delectus debitis dolorem assumenda obcaecati nemo quod atque."
+const largeTxt = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, fugit non. "
 
 const footer = (
   <footer>
