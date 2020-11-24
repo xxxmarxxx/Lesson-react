@@ -23,6 +23,7 @@ class CheckBoxAgeConfirmation extends React.Component {
     console.log(this.state.isConfirmed);
     return (
       <>
+      <div className="wrapper">
         <h1>Kup bilet na horror roku!</h1>
         <input
           type="checkbox"
@@ -32,6 +33,7 @@ class CheckBoxAgeConfirmation extends React.Component {
         />
         <label htmlFor="age">Mam co najmniej 16 lat</label>
         {this.displayMessage()}
+        </div>
       </>
     );
   }
