@@ -45,11 +45,11 @@ class Blog extends React.Component {
 
 const App = () => {
   return(
-    <>
+    <div>
     <Header />
     <Blog />
     <Title />
-    </>
+    </div>
   )
 }
 
