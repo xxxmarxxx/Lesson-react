@@ -18,15 +18,15 @@ button{
     font-size: 18px;
 }
 .clock{
-    color: rgb(255, 0, 111);
+    color: rgb(0, 255, 123);
     font-size: 30px;
     width: 300px;
     height: 300px;
-    color: #FFFFFF;
-    background: #912C22;
-    text-shadow: 0 0 10px #FFFFFF;
+    /* color: #ffffff; */
+    /* background: #912C22; */
+    text-shadow: 0 0 10px #ffffff;
     background-color: rgb(31, 16, 16);
-    border: solid 30px #81a1ac;
+    border: solid 30px #81a8ac;
     padding-top: 100px;
     margin: auto;
     border-radius: 300px;
