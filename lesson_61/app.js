@@ -29,16 +29,16 @@ class Clicker extends React.Component {
     this.setState((state) => {
         // console.log(state);
       return {
-        number3: this.state.number3 + 1,
+        number3: state.number3 + 1,
       };
     });
     this.setState((state) => {
         // console.log(state);
         return {
-          number3: this.state.number3 + 1,
+          number3: state.number3 + 1,
         };
       });
-      this.setState((prevState) => {
+    this.setState((prevState) => {
         console.log(prevState);
         console.log(this.state);
         return {
@@ -48,6 +48,7 @@ class Clicker extends React.Component {
     
     console.log(this.state.number3);
   };
+
   render() {
     console.log(this.state.number1 + "w render");
     return (
