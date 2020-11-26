@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Timer from './Timer';
 import './App.css';
-import SwitchButton from './SwitchButton'
+import SwitchButton from './SwitchButton';
 
 
 
@@ -32,8 +33,10 @@ addSecond = ()=> {
   render() { 
     return ( 
       <>
-      <p>{this.state.time}</p>
-      <SwitchButton click={this.handleClick} active={this.state.active} />
+      <h2>Stopwatch</h2>
+      <p className="timer">{this.state.time}</p>
+      <SwitchButton click={this.handleClick} active={this.state.active} /> <br/>
+      <Timer />
       </>
      );
   }
