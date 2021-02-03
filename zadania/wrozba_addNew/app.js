@@ -43,7 +43,7 @@ class Draw extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <button onClick={this.handleShowOption}>Zobacz co wywruzyles</button>
+        <button onClick={this.handleShowOption}>Zobacz co wywrozyles</button>
         <br />
         <input type="text" value={this.state.value} onChange={this.handleIputChange}/>
         <button onClick={this.handleAddOption}>Dodaj wrozbe</button>
