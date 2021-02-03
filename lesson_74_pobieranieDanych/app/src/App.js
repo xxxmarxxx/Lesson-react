@@ -52,9 +52,14 @@ class App extends Component {
     ));
     // console.log(comments);
     return (
+      <>
+      <div>
+        <h1 className="text">Pseudo rosnaca baza danych lesson 74 </h1>
+      </div>
       <div className="App">
         {comments.reverse()}
       </div>
+      </>
     );
   }
 }
