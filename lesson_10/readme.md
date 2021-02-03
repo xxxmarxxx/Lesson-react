@@ -1,1 +1,0 @@
-# Komponent funkcyjny i klasowy - lekcja 10
