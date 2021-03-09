@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Lesson 65/66 Zegarek</h1>
+        <h1>Lesson 65/66 Clock</h1>
         <SwitchButton active={this.state.active} click={this.handleClick} />
         {this.state.active && <Clock />}
         
