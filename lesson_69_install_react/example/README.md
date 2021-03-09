@@ -1,3 +1,3 @@
 # React App StopWatch
 
-![image](./components/assets/.img.png)
+![image](./scr/components/assets/.img.png)
