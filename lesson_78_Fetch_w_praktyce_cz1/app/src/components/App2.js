@@ -32,7 +32,7 @@ class App extends Component {
     const users = this.state.users;
     return (
       <div className="App">
-        <h1>Lesson 78 cz.2 Fetch in practice</h1>
+        <h1>Lesson 78 no.2 Fetch in practice</h1>
         <ButtonFetchUsers click={this.handleDataFetch}/>
         {users.length > 0 ? <UsersList users={users}/> : users}
       </div>
