@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# React App
+# form structure creation
+
+![image](./src/assets/img.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
