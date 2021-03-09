@@ -87,7 +87,7 @@ class App extends React.Component {
 
 return ( 
       <div>
-    <button style={btn} onClick={()=> this.setState({ active: !this.state.active })}>{this.state.active ? "Wylacz" : "Wlacz"}</button>
+    <button style={btn} onClick={()=> this.setState({ active: !this.state.active })}>{this.state.active ? "OFF" : "ON"}</button>
       </div>
      );
 

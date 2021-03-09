@@ -8,7 +8,7 @@ class App extends React.Component {
     underline: false,
   };
   render() {
-      const text = "Witaj na stronie"
+      const text = "Welcome to the Side"
     //   let classes = "";
     //   if(this.state.underline) classes+=" line"
     //   if(text.length > 10) classes += " big"
